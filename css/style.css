@@ -1,18 +1,15 @@
 /* ===== Missy Foley Realtor — Editorial Rebrand ===== */
-/* Eyesome Script is a licensed font (not on Google Fonts). Drop your licensed
-   file at fonts/EyesomeScript.woff2 and this @font-face will use it automatically.
-   Until then, the script role falls back to Dancing Script (free, close in feel). */
 @font-face{
-  font-family:"Eyesome";
-  src:url("../fonts/EyesomeScript.woff2") format("woff2"),
-      url("../fonts/EyesomeScript.woff") format("woff"),
-      url("../fonts/EyesomeScript.otf") format("opentype");
-  font-weight:400;font-display:swap;
+  font-family:"Great Vibes";
+  src:url("../fonts/GreatVibes.woff2") format("woff2"),
+      url("../fonts/GreatVibes.ttf") format("truetype");
+  font-weight:400;font-style:normal;font-display:swap;
 }
+/* Script face: Great Vibes (Google Fonts) — chosen to match Missy's signature logotype. */
 :root{
-  --paper:#F6F2EB;--paper-2:#EFE8DC;--ink:#181613;--ink-2:#4A443C;--taupe:#9A8F7C;
-  --line:#D8CFBF;--red:#C8102E;--red-dk:#98091F;--white:#fff;--maxw:1240px;
-  --script:"Eyesome","Dancing Script",cursive;
+  --paper:#F6F2EB;--paper-2:#EFE8DC;--ink:#181613;--ink-2:#4A443C;--taupe:#6E6551;
+  --line:#D8CFBF;--red:#C8102E;--red-dk:#98091F;--white:#fff;--offwhite:#FBF7F0;--maxw:1240px;
+  --script:"Great Vibes","Dancing Script",cursive;
   --sans:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -33,7 +30,7 @@ p{max-width:66ch}
 .section{padding:clamp(64px,9vw,120px) 0}
 .btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;transition:background .22s,color .22s,border-color .22s}
 .btn:hover{background:transparent;color:var(--ink)}
-.btn--red{background:var(--red);border-color:var(--red);color:#fff}
+.btn--red{background:var(--red);border-color:var(--red);color:var(--offwhite)}
 .btn--red:hover{background:transparent;color:var(--red)}
 .btn--ghost{background:transparent;color:var(--ink)}
 .btn--ghost:hover{background:var(--ink);color:#fff}
@@ -104,7 +101,7 @@ p{max-width:66ch}
 .area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border-top:1px solid #322d26;border-left:1px solid #322d26}
 .area-grid a{padding:26px 22px;border-right:1px solid #322d26;border-bottom:1px solid #322d26;font-weight:700;letter-spacing:.06em;font-size:1.02rem;color:#efe8dc;display:flex;justify-content:space-between;align-items:center;transition:background .22s,color .22s}
 .area-grid a:hover{background:var(--red);color:#fff}
-.area-grid a span{font-size:.7rem;color:var(--taupe);letter-spacing:.14em}
+.area-grid a span{font-size:.7rem;color:#AFA491;letter-spacing:.14em}
 .area-grid a:hover span{color:#fff}
 .testi{background:var(--paper-2)}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -141,7 +138,7 @@ p{max-width:66ch}
 .footer a:hover{color:var(--red)}
 .footer__lp{display:inline-flex;align-items:center;gap:8px;margin-top:20px;color:#fff;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
 .footer__lp b{color:var(--red)}
-.footer__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:26px;font-size:.78rem;color:#7d766b}
+.footer__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:26px;font-size:.78rem;color:#918a7d}
 .footer__bottom a{font-size:.78rem}
 .page-hero{background:var(--paper-2);border-bottom:1px solid var(--line);padding:clamp(50px,7vw,88px) 0}
 .page-hero .script{color:var(--red);font-size:clamp(2.2rem,4.5vw,3.2rem);display:block;margin-bottom:2px}
@@ -196,3 +193,11 @@ p{max-width:66ch}
   .feature__media::before{inset:0 0 20px 20px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+
+/* ===== Accessibility ===== */
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.hero__right img:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+/* On dark sections a red outline can be low-contrast against near-black; use a light ring */
+.areas a:focus-visible,.footer a:focus-visible,.marquee :focus-visible,.search-hero a:focus-visible,.cta .btn--onred:focus-visible{outline:3px solid #FBF7F0;outline-offset:3px}
+.skip-link{position:absolute;left:-999px;top:0;z-index:1000;background:var(--ink);color:var(--offwhite);padding:12px 20px;font-weight:600;letter-spacing:.06em}
+.skip-link:focus{left:12px;top:12px}

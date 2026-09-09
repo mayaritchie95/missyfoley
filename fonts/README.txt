@@ -1,19 +1,9 @@
-EYESOME SCRIPT FONT (the flowing script used for "Missy Foley" and accent words)
+FONTS
 
-Eyesome Script is a paid/licensed font and cannot be loaded from a free web
-service, so the site currently displays a close free stand-in (Dancing Script).
+  • Poppins      — headings, navigation, buttons, body text (loaded from Google Fonts).
+  • Great Vibes  — the flowing signature script for "Missy Foley" and accent lines,
+                   chosen to match your business-card logotype.
 
-To use your real Eyesome Script font once you've purchased/licensed it:
-  1. Get the web font files from where you licensed it (ideally .woff2 and .woff;
-     an .otf/.ttf also works). Many sellers provide a "webfont" download, or you
-     can convert an .otf at https://transfonter.org
-  2. Drop the file(s) here in this /fonts folder and name them exactly:
-        EyesomeScript.woff2
-        EyesomeScript.woff      (optional but recommended)
-        EyesomeScript.otf       (optional fallback)
-  3. That's it — the site is already wired to use them automatically.
-
-No code changes needed. If only an .otf is available, just add EyesomeScript.otf here.
-
-------------------------------------------------------------------
-Body / heading font: Poppins (loaded automatically from Google Fonts).
+Great Vibes is bundled locally in this folder (GreatVibes.woff2 + GreatVibes.ttf)
+and is free/open-source (SIL Open Font License), so it loads instantly and works
+even if Google Fonts is ever unavailable. Nothing to install.
