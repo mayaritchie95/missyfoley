@@ -245,3 +245,6 @@ p{max-width:66ch}
 .area-tile--more{background:#F0E4E4}
 .area-tile--more:hover{background:#EAD8D8}
 .area-tile--more h3{color:var(--red)}
+
+/* Hero H1 (promoted from the name line) */
+.hero__h1{text-transform:none;letter-spacing:.005em;margin:0 0 4px;font-size:clamp(3rem,6vw,4.8rem)}
