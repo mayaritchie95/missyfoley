@@ -242,3 +242,6 @@ p{max-width:66ch}
 .area-tile .go{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 @media(max-width:900px){.areas-hub__grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.areas-hub__grid{grid-template-columns:1fr}}
+.area-tile--more{background:#F0E4E4}
+.area-tile--more:hover{background:#EAD8D8}
+.area-tile--more h3{color:var(--red)}
